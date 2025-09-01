@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zeta-Regularization and the τ Framework</title>
+  <meta name="description" content="A companion paper linking divergent series, zeta-regularization, and the τ-framework for unifying infinities in physics." />
+  <style>
+    :root{
+      --bg:#0b0f19;--panel:#121827;--ink:#e6e8ee;--muted:#a3acc2;
+      --accent:#7c3aed;--accent-2:#f59e0b;--rule:#2a3348;--code:#0e1422;
+      --link:#9aa8ff;--maxw:880px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{--bg:#ffffff;--panel:#f6f7fb;--ink:#0f1222;--muted:#4a546e;
+        --rule:#e4e7f0;--code:#f1f3f9;--link:#2b59ff;}
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);
+      font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:48px 20px 96px}
+    header{text-align:center;margin-bottom:32px}
+    .logo{font-size:clamp(32px,6vw,58px);font-weight:800;letter-spacing:1px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      display:inline-block;margin-bottom:12px}
+    h1{margin:0 0 8px;font-size:clamp(26px,4.5vw,38px);line-height:1.2}
+    .subtitle{color:var(--muted);font-size:15px}
+    .meta{margin-top:8px;color:var(--muted);font-size:14px}
+    nav{margin:26px auto;max-width:600px;text-align:left;background:var(--panel);
+      border:1px solid var(--rule);border-radius:12px;padding:16px 20px}
+    nav a{color:var(--link);text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    nav ul{margin:0;padding-left:18px}
+    section{background:rgba(255,255,255,.02);border:1px solid var(--rule);
+      border-radius:16px;padding:24px 20px;margin:18px 0}
+    h2{margin:0 0 8px;font-size:clamp(20px,3.5vw,26px)}
+    h3{margin:16px 0 8px;font-size:18px}
+    p{margin:10px 0 0}
+    .equation{display:block;margin:12px 0;padding:12px 14px;background:var(--code);
+      border:1px solid var(--rule);border-radius:10px;font-family:ui-monospace,Menlo,Consolas,monospace;
+      overflow:auto;white-space:nowrap}
+    .abstract{font-style:italic;color:var(--muted)}
+    .callout{padding:14px;border:1px dashed var(--rule);border-radius:12px;background:rgba(245,158,11,.08)}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    table{width:100%;border-collapse:collapse;margin:8px 0}
+    th,td{border:1px solid var(--rule);padding:8px;vertical-align:top}
+    th{background:var(--panel);text-align:left}
+    code{background:var(--code);padding:1px 4px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">τ</div>
+      <h1>Zeta-Regularization and the τ Framework</h1>
+      <div class="subtitle">Assigning finite invariants to divergent series through temporal–energetic unification</div>
+      <div class="meta">Author: Tristan White • v1.0 • Updated: Mon, Sep 1, 2025, 9:15 AM EDT</div>
+      <nav aria-label="Contents">
+        <ul>
+          <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#background">1. Background</a></li>
+          <li><a href="#zeta">2. Zeta-Regularization</a></li>
+          <li><a href="#tau">3. τ-Framework Interpretation</a></li>
+          <li><a href="#tests">4. Tests & Applications</a></li>
+          <li><a href="#implications">5. Implications</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#appendix">Appendix A — Worked Derivations</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="abstract"><h2>Abstract</h2>
+        <p class="abstract">We explore the connection between divergent series in mathematics, their finite assignments through zeta-regularization, and the τ-framework for unifying time, mass, and energy. Just as the series 1 + 2 + 3 + … can be assigned the value −1/12, the τ framework suggests that infinities in physical theory may yield consistent, finite invariants when recast in temporal–energetic form. We propose tests to explore whether τ can serve as a renormalizing substrate across cosmology, quantum mechanics, and field theory.</p>
+      </section>
+
+      <section id="background"><h2>1. Background</h2>
+        <p>In mathematics, divergent series like <span class="equation">1 + 2 + 3 + 4 + …</span> do not converge in the traditional sense. Yet, through analytic continuation of the Riemann zeta function ζ(s), the series can be assigned a value of <span class="equation">ζ(−1) = −1/12</span>. In physics, such assignments appear in quantum field theory, string theory, and the Casimir effect, where vacuum energies become finite and measurable once regularized.</p>
+      </section>
+
+      <section id="zeta"><h2>2. Zeta-Regularization</h2>
+        <h3>2.1 Riemann ζ function</h3>
+        <div class="equation">ζ(s) = ∑_{n=1}^∞ n^{−s}, Re(s) > 1</div>
+        <p>Through analytic continuation, ζ(s) is extended to the complex plane, except at s = 1 where it diverges.</p>
+
+        <h3>2.2 Famous example</h3>
+        <div class="equation">1 + 2 + 3 + 4 + … = ζ(−1) = −1/12</div>
+        <p>This is not ordinary summation but a consistent reassignment that preserves analytic structure.</p>
+      </section>
+
+      <section id="tau"><h2>3. τ-Framework Interpretation</h2>
+        <p>In the τ framework, we define <span class="equation">τ = m/c = E/c³</span>. Divergences in mass–energy sums can be reframed as divergences in τ. If infinite sums of modes (as in QFT) are rewritten in τ-units, the invariant finite value can be interpreted as a “renormalized τ.”</p>
+        <div class="equation">E_div = ∑_{n=1}^∞ n → τ_eff = (E_div)/c³ = −1/(12 c³)</div>
+        <p>This suggests τ can serve as a natural regulator: divergent energy sums collapse into finite τ-invariants, analogous to zeta-regularization.</p>
+      </section>
+
+      <section id="tests"><h2>4. Tests & Applications</h2>
+        <h3>4.1 Casimir Effect</h3>
+        <p>Vacuum energy difference between plates already uses ζ(−1) implicitly. Reformulating in τ-variables could yield new scaling predictions.</p>
+
+        <h3>4.2 Particle Spectrum Sums</h3>
+        <p>Mass towers in string theory: replace <code>∑ m</code> with <code>∑ cτ</code>. Check whether τ-regularization reproduces known anomalies.</p>
+
+        <h3>4.3 Cosmological Constant</h3>
+        <p>Vacuum energy density <code>ρ ∼ ∑ ½ ħω</code>. Express <code>ω = (c³/ħ)τ</code>. Test whether τ-regularization yields a small finite value consistent with dark energy.</p>
+
+        <h3>4.4 Operational Lab Tests</h3>
+        <ul>
+          <li><strong>Clock drifts:</strong> Compare measured δτ/τ to predicted residuals from zeta-regularized sums.</li>
+          <li><strong>Cyclotron frequency shifts:</strong> Test whether high-order corrections scale with τ-effective values.</li>
+        </ul>
+      </section>
+
+      <section id="implications"><h2>5. Implications</h2>
+        <ul>
+          <li>Suggests τ is not only a bridge between time, mass, and energy but also a renormalization parameter.</li>
+          <li>Links divergent series summation (ζ-regularization) to physical observables.</li>
+          <li>May provide a new conceptual basis for handling infinities in quantum gravity and cosmology.</li>
+        </ul>
+      </section>
+
+      <section id="references"><h2>References</h2>
+        <ol>
+          <li>Hardy, G.H. (1949). <em>Divergent Series</em>.</li>
+          <li>Elizalde, E. (1995). <em>Ten Physical Applications of Spectral Zeta Functions</em>.</li>
+          <li>Polchinski, J. (1998). <em>String Theory</em>, Vol. 1.</li>
+          <li>White, T. (2025). <em>Unified Temporal–Energetic Geometry</em>.</li>
+        </ol>
+      </section>
+
+      <section id="appendix"><h2>Appendix A — Worked Derivations</h2>
+        <h3>A.1 Cesàro vs ζ-summation</h3>
+        <p>Series <span class="equation">1 − 1 + 1 − 1 + …</span> has partial sums oscillating {1, 0, 1, 0,…}. Cesàro summation assigns it ½.</p>
+
+        <h3>A.2 ζ(−1)</h3>
+        <div class="equation">ζ(s) = ∑ n^{−s}</div>
+        <p>Analytic continuation gives <span class="equation">ζ(−1) = −1/12</span>. Thus:</p>
+        <div class="equation">1 + 2 + 3 + … = −1/12</div>
+
+        <h3>A.3 τ reinterpretation</h3>
+        <p>Define <span class="equation">E = c³τ</span>. Then divergent energy sums map to τ-sums:</p>
+        <div class="equation">∑ n → τ_eff = −1/(12c³)</div>
+        <p>So the “temporal charge” τ acts like a natural regulator: infinities collapse to finite τ-invariants.</p>
+      </section>
+    </main>
+
+    <footer>© <span id="y"></span> Tristan White • Creative Commons BY-NC-SA 4.0</footer>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
